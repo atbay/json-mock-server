@@ -1,14 +1,4 @@
-{
-  "movies": [
-    {"id": 1, "name": "The Godfather", "director":"Francis Ford Coppola", "rating": 9.1},
-    {"id": 2, "name": "Casablanca", "director": "Michael Curtiz", "rating": 8.8}
-  ],
-  "test": [
-    {"id": 1, "name": "test1", "director":"Francis Ford Coppola", "rating": 9.1},
-    {"id": 2, "name": "test2", "director": "Michael Curtiz", "rating": 8.8}
-  ],
-  "telemetory": [
+[
     {"code":0,"id":"DR00001","lan":"35.685175","lon":"139.757575757","alt":"25.10","x-speed":"10.00000","y-speed":"10.0000","z-speed":"10.00000","rating":9.1},
     {"code":0,"id":"DR00002","lan":"35.685175","lon":"139.757575757","alt":"25.10","x-speed":"10.00000","y-speed":"10.0000","z-speed":"10.00000","rating":9.1}
-  ]
-}
+]
