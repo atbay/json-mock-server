@@ -5,16 +5,20 @@ import * as bodyParser from 'body-parser';
 import * as log4js from 'log4js';
 import * as cors from 'cors';
 
+import { Router } from './router/router';
+
 // サーバ構築
 class App {
 
     public app: express.Application;
     private accessLogger: log4js.Logger;
+    private router: Router = new Router();
 
     constructor() {
         this.app = express();
         this.accessLogger = log4js.getLogger('access');
         this.config();
+        this.router.roters(this.app);
     }
 
     private config() :void {
