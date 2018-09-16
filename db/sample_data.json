@@ -1,5 +1,5 @@
 [
-    {"UtmId":"utm00","Aircraft":"drone000","RequestId":"","Command":"Get_position","Result":"","Contents":{"Latitude":0,"Longiude":0,"Altitude":0,"Velocity":0,"SlipVelocity":0,"VerticalVelcity":0,"Yaw":0,"Pich":0,"Roll":0},"StatusDetail":""},
-    {"UtmId":"utm01","Aircraft":"drone001","RequestId":"","Command":"Get_position","Result":"","Contents":{"Latitude":0,"Longiude":0,"Altitude":0,"Velocity":0,"SlipVelocity":0,"VerticalVelcity":0,"Yaw":0,"Pich":0,"Roll":0},"StatusDetail":""},
-    {"UtmId":"utm02","Aircraft":"drone002","RequestId":"","Command":"Get_position","Result":"","Contents":{"Latitude":0,"Longiude":0,"Altitude":0,"Velocity":0,"SlipVelocity":0,"VerticalVelcity":0,"Yaw":0,"Pich":0,"Roll":0},"StatusDetail":""}
+    {"UtmId":"utm00","Aircraft":"drone000","RequestId":"","Command":"Get_position","Result":"","Contents":{"Latitude":0,"Longitude":0,"Altitude":0,"Velocity":0,"SlipVelocity":0,"VerticalVelocity":0,"Yaw":0,"Pich":0,"Roll":0},"StatusDetail":""},
+    {"UtmId":"utm01","Aircraft":"drone001","RequestId":"","Command":"Get_position","Result":"","Contents":{"Latitude":0,"Longitude":0,"Altitude":0,"Velocity":0,"SlipVelocity":0,"VerticalVelocity":0,"Yaw":0,"Pich":0,"Roll":0},"StatusDetail":""},
+    {"UtmId":"utm02","Aircraft":"drone002","RequestId":"","Command":"Get_position","Result":"","Contents":{"Latitude":0,"Longitude":0,"Altitude":0,"Velocity":0,"SlipVelocity":0,"VerticalVelocity":0,"Yaw":0,"Pich":0,"Roll":0},"StatusDetail":""}
 ]
