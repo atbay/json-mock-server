@@ -1,5 +1,5 @@
 [
-    {"UtmId":"utm00","Aircraft":"drone000","RequestId":"","Command":"Get_position","Result":"","Contents":{"Latitude":0,"Longitude":0,"Altitude":0,"Velocity":0,"SlipVelocity":0,"VerticalVelocity":0,"Yaw":0,"Pich":0,"Roll":0},"StatusDetail":""},
-    {"UtmId":"utm01","Aircraft":"drone001","RequestId":"","Command":"Get_position","Result":"","Contents":{"Latitude":0,"Longitude":0,"Altitude":0,"Velocity":0,"SlipVelocity":0,"VerticalVelocity":0,"Yaw":0,"Pich":0,"Roll":0},"StatusDetail":""},
-    {"UtmId":"utm02","Aircraft":"drone002","RequestId":"","Command":"Get_position","Result":"","Contents":{"Latitude":0,"Longitude":0,"Altitude":0,"Velocity":0,"SlipVelocity":0,"VerticalVelocity":0,"Yaw":0,"Pich":0,"Roll":0},"StatusDetail":""}
+    {"UtmId":"dr0001","Aircraft":"drone001","RequestId":"","Command":"Get_position","Result":"","Contents":{"Latitude":"35.1539250","Longitude":"138.8534985,","Altitude":0,"Velocity":0,"SlipVelocity":0,"VerticalVelocity":"250","Yaw":0,"Pich":0,"Roll":0},"StatusDetail":""},
+    {"UtmId":"dr0002","Aircraft":"drone001","RequestId":"","Command":"Get_position","Result":"","Contents":{"Latitude":"35.1544044","Longitude":"138.8545291,","Altitude":0,"Velocity":0,"SlipVelocity":0,"VerticalVelocity":"250","Yaw":0,"Pich":0,"Roll":0},"StatusDetail":""},
+    {"UtmId":"dr0003","Aircraft":"drone001","RequestId":"","Command":"Get_position","Result":"","Contents":{"Latitude":"35.1554597","Longitude":"138.8547809,","Altitude":0,"Velocity":0,"SlipVelocity":0,"VerticalVelocity":"250","Yaw":0,"Pich":0,"Roll":0},"StatusDetail":""}
 ]
