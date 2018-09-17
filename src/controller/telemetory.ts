@@ -36,7 +36,6 @@ export class Telemetory {
                         break;
                     }
                 }
-                return;
             }
             response.status(404).send({ message: 'Not Found.' });
         } catch (error) {
@@ -83,6 +82,10 @@ export class Telemetory {
             response.status(201).send('OK!');
         } catch (error) {
             console.log(error);
+            response.status(500).send({
+                message: 'Internal Server Error.',
+                requestBody: `${request.body}`,
+            });
         }
     }
 
