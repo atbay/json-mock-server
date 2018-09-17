@@ -53,18 +53,32 @@ export class Telemetory {
      * @param next next
      */
     public async post(request: Request, response: Response, next: NextFunction) {
-        if (request.headers['content-type'] !== 'application/json') {
+        if (request.headers['content-type'] !== 'application/json' ||
+         (request.body == null && request.body.UtmId == null)) {
+            console.log(`post reqeust ${request.body}`);
             response.status(400).send({
                 message: `Bad Content-type [${request.headers['content-type'] }]`,
+                requestBody: `${request.body}`,
             });
             return;
         }
 
         try {
-            const json: any = await Common.readJson(dbpath);
-            if (json) {
-                json.push(request.body);
+            let json: any = await Common.readJson(dbpath);
+            if (!json) {
+                json = [];
             }
+            // 重複するIDを削除
+            for (const index in json) {
+                if (json[index].UtmId === request.body.UtmId) {
+                    json.splice(index, 1);
+                    await Common.writeJson(dbpath, JSON.stringify(json));
+                    break;
+                }
+            }
+            json.push(request.body);
+            // await this.deleteId(request.body.UtmId);
+            console.log(`add data ${json}`);
             Common.writeJson(dbpath, JSON.stringify(json, undefined, 1)); // 整形した形で出力
             response.status(201).send('OK!');
         } catch (error) {
@@ -76,25 +90,44 @@ export class Telemetory {
         response.send('called put method!');
     }
 
+    /**
+     * リソース削除
+     * @param request request
+     * @param response response
+     * @param next next
+     */
     public async delete(request: Request, response: Response, next: NextFunction) {
         try {
+            const id = request.param('id');
             const json: any = await Common.readJson(dbpath);
             if (json) {
-                const id = request.param('id');
                 for (const index in json) {
                     if (json[index].UtmId === id) {
                         json.splice(index, 1);
                         await Common.writeJson(dbpath, JSON.stringify(json));
-                        response.status(200).send();
                         break;
                     }
                 }
-                return;
             }
-            response.status(200).send();
+            // await this.deleteId(id);
+            response.status(200).send({ message: 'OK!' });
         } catch (error) {
             console.log(error);
             response.status(500).send({ message: 'Internal Server Error.' });
         }
     }
+
+    // private async deleteId(id: string) {
+    //     console.log('call!!!');
+    //     const json: any = await Common.readJson(dbpath);
+    //     if (json) {
+    //         for (const index in json) {
+    //             if (json[index].UtmId === id) {
+    //                 json.splice(index, 1);
+    //                 await Common.writeJson(dbpath, JSON.stringify(json));
+    //                 break;
+    //             }
+    //         }
+    //     }
+    // }
 }
